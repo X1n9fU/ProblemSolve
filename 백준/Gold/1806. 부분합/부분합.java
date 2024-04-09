@@ -1,53 +1,30 @@
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-
+import java.util.*;
+ 
 public class Main {
-    public static void main(String[] args) throws IOException {
-
-        final int INF = 987654321;
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-
-        int N = Integer.parseInt(st.nextToken());
-        int S = Integer.parseInt(st.nextToken());
-
-        int [] num = new int[N];
-        st = new StringTokenizer(br.readLine());
-        int prefix = 0;
-        for (int i=0; i<N; i++){
-            int tmp = Integer.parseInt(st.nextToken());
-            if (tmp == S) {
-                System.out.println(1);
-                return;
-            }
-            prefix += tmp;
-            num[i] = prefix;
+    
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        int n = scan.nextInt();
+        int s = scan.nextInt();
+        
+        int[] nums = new int[n + 1];
+        for(int i = 0; i < n; i++) {
+            nums[i] = scan.nextInt();
         }
-
-        if (num[N-1] == S) {
-            System.out.println(N);
-            return;
+        
+        int min = Integer.MAX_VALUE;
+        int start = 0;
+        int end = 0;
+        int total = 0;
+        while(start <= n && end <= n) {
+            if(total >= s && min > end - start) min = end - start;
+            
+            if(total < s) total += nums[end++];
+            else total -= nums[start++];
         }
-
-        int result = INF;
-        for (int i=0; i<N; i++){
-            for (int j=i+1; j<N; j++){
-                if (num[j] - num[i] >= S){
-                    result = Math.min(result, j - i);
-                    break;
-                }
-
-            }
-        }
-
-        if (result != INF)
-            System.out.println(result);
-        else
-            System.out.println(0);
-
-
+        
+        if(min == Integer.MAX_VALUE) System.out.println("0");
+        else System.out.println(min);
     }
-}
+}    
