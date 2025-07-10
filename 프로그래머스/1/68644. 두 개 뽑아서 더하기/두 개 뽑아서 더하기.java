@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] numbers) {
-        Set<Integer> nums = new HashSet<>();
+        Set<Integer> nums = new TreeSet<>();
         
         for (int i=0; i<numbers.length-1; i++) {
             for (int j=i+1; j<numbers.length; j++) {
@@ -12,6 +12,6 @@ class Solution {
 
         return nums.stream()
                 .mapToInt(Integer::intValue)
-                .sorted().toArray();
+                .toArray();
     }
 }
