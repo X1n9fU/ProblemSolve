@@ -5,10 +5,9 @@ class Solution {
             for (int j=i; j<nums.length; j++) { // 현재 확인하는 인덱스
                 if (nums[j] + nums[j-i] == target) {
                     answer = new int [] {j-i, j};
-                    return answer;
                 }
             }
         }
-        return null;
+        return answer;
     }
 }
