@@ -1,14 +1,12 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> hm = new HashMap<>();
-        int [] answer = {};
-        for (int i=0; i<nums.length; i++) {
-            int minus = target - nums[i];
-            if (hm.containsKey(minus)) {
-                answer = new int[] {i, hm.get(minus)};
-                break;
-            } else hm.put(nums[i], i);
+        for (int i=1; i<nums.length; i++) { //배열 내 숫자들의 사이값
+            for (int j=i; j<nums.length; j++) {
+                if (nums[j] + nums[j-i] == target) {
+                    return new int [] {j-i, j};
+                }
+            }
         }
-        return answer; //출력값이 꼭 있기 때문에 null 처리
+        return null;
     }
 }
