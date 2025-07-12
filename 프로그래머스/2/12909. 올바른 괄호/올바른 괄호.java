@@ -3,22 +3,18 @@ import java.util.Objects;
 
 class Solution {
     boolean solution(String s) {
-        int left = 0;
-        int right = 0;
+        // ( = 0 , ) = 1
+        Stack<Integer> st = new Stack<>();
         for (int i=0; i<s.length(); i++) {
-            if ((i==0 && s.charAt(i) == ')') ||
-                    (i==s.length()-1 && s.charAt(i) == '(')) {
-                return false;
-            }
             if (s.charAt(i) == '(') {
-                left++;
+                st.push(0);
+            } else {
+                if (st.isEmpty()) return false;
+                st.pop();
             }
-            else {
-                right ++;
-            }
-            if (right > left) return false;
-
         }
-        return left == right;
+        
+        if (!st.isEmpty()) return false;
+        return true;
     }
 }
