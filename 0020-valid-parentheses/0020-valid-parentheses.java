@@ -3,24 +3,6 @@ import java.util.*;
 
 class Solution {
     public boolean isValid(String s) {
-        // int sLeft=0;
-        // int sRight=0;
-        // int mLeft=0;
-        // int mRight=0;
-        // int lLeft=0;
-        // int lRight=0;
-
-        // for (int i=0; i<s.length(); i++) {f
-        //     char c = s.charAt(i);
-        //     if (c == '(') sLeft++;
-        //     else if (c == ')') sRight++;
-        //     else if (c == '{') mLeft++;
-        //     else if (c == '}') mRight++;
-        //     else if (c == '[') lLeft++;
-        //     else if (c == ']') lRight++;
-            
-        //     if (sLeft < sRight || mLeft < mRight || lLeft < lRight) return false;
-        // }
         Stack<Integer> st = new Stack<>();
 
         for (int i=0; i<s.length(); i++) {
