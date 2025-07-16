@@ -2,16 +2,15 @@ import java.util.ArrayList;
 
 class Solution {
     public int solution(int n) {
-        ArrayList<Long> fibo = new ArrayList<>();
-        fibo.add(0L);
-        fibo.add(1L);
+        int [] fibo = new int[n+1];
+        fibo[0] = 0;
+        fibo[1] = 1;
         
-        for (int i=2; i<=n; i++){
-            fibo.add((fibo.get(i-1) + fibo.get(i-2)) % 1234567);    
+        for (int i=2; i<=n; i++) {
+            fibo[i] = (fibo[i-1] + fibo[i-2]) % 1234567;
         }
         
-        long answer = fibo.get(n); 
-        
-        return (int) (answer);
+        int answer = fibo[n];
+        return answer;
     }
 }
