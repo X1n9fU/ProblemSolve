@@ -29,4 +29,20 @@
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/X1n9fU/ProblemSolve/tree/master/0020-valid-parentheses) |
+## Math
+|  |
+| ------- |
+| [1013-fibonacci-number](https://github.com/X1n9fU/ProblemSolve/tree/master/1013-fibonacci-number) |
+## Dynamic Programming
+|  |
+| ------- |
+| [1013-fibonacci-number](https://github.com/X1n9fU/ProblemSolve/tree/master/1013-fibonacci-number) |
+## Recursion
+|  |
+| ------- |
+| [1013-fibonacci-number](https://github.com/X1n9fU/ProblemSolve/tree/master/1013-fibonacci-number) |
+## Memoization
+|  |
+| ------- |
+| [1013-fibonacci-number](https://github.com/X1n9fU/ProblemSolve/tree/master/1013-fibonacci-number) |
 <!---LeetCode Topics End-->
