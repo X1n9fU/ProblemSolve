@@ -17,6 +17,7 @@
 | ------- |
 | [0001-two-sum](https://github.com/X1n9fU/ProblemSolve/tree/master/0001-two-sum) |
 | [0088-merge-sorted-array](https://github.com/X1n9fU/ProblemSolve/tree/master/0088-merge-sorted-array) |
+| [0792-binary-search](https://github.com/X1n9fU/ProblemSolve/tree/master/0792-binary-search) |
 ## Sorting
 |  |
 | ------- |
@@ -45,4 +46,8 @@
 |  |
 | ------- |
 | [1013-fibonacci-number](https://github.com/X1n9fU/ProblemSolve/tree/master/1013-fibonacci-number) |
+## Binary Search
+|  |
+| ------- |
+| [0792-binary-search](https://github.com/X1n9fU/ProblemSolve/tree/master/0792-binary-search) |
 <!---LeetCode Topics End-->
